@@ -251,10 +251,12 @@ hr {
 
 }
 
-@media (min-width:770px) and (max-width:1400px) {
+@media (min-width:641px) and (max-width:1400px) {
 nav {
-  padding-left: 2%;
-  padding-right: 2%;
+  min-width: 641px;
+    max-width: 1400px !important;
+    padding-left: 2%;
+    padding-right: 2%;
 }
   .home .home-content {
     margin-left: 0 !important;
@@ -336,9 +338,8 @@ form ,.button{
 
 
 nav {
-    max-width: 375px !important;
-    margin-top: 40px !important;
-    padding: 0 20px !important;
+  width: 100%;
+    max-width: 640px !important;
 }
 
 ul {
@@ -370,7 +371,13 @@ ul {
 }
 
 }
-
+@media (max-width:375px) {
+  nav {
+    width: 100%;
+    max-width: 375px !important;
+}
+  
+}
 .home {
   background-image: url(../images/fullscreendark.jpg);
   background-size: cover;
