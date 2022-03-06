@@ -83,26 +83,65 @@ nav ul li a:hover {
 #click{
   display: none;
 }
+.menu {
+  display: none;
+  color: white;
+  padding: 15px;
+
+}
 @media (max-width:768px) {
+  .menu {
+    display: block;
+}
+
+
+  nav  ul {
+    background-color: aquamarine;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    top: 70px;
+    z-index: 2;
+    text-align: center;
+    display: block;
+    height: 80vh;
+    border-radius: 20px;
+    width: 100%;
+    transition: right .5s ease;
+    z-index: 999999999999999999999999999999999999999999;
+  
+}
+#click:checked ~   ul {
+  /* left: 100%; */
+}
+/* #click:checked ~ ul {
+  right: 0;
+} */
+
+nav ul li {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+
+}
+nav ul li a {
+  display: block;
+}
+
   
 nav {
     padding-left: 2%;
     padding-right: 2%;
+    width: 767px !important;
+
 }
   
 h2 {
     font-size: 35px !important;
 }
 
-nav {
-      width: 767px !important;
-}
-nav .menu i {
-  color: #fff;
-  font-size: 22px;
-  cursor: pointer;
-  display: none;
-}
+
+
 
 .home .home-content {
   margin-left: 0 !important;
@@ -212,21 +251,88 @@ hr {
 
 }
 
+@media (min-width:770px) and (max-width:1400px) {
+nav {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+  .home .home-content {
+    margin-left: 0 !important;
+  }
+  .Aboutme  .container-info {
+    padding: 0 !important;
+  }
+  .information-aboutme {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutme-img img {
+    width: 600px !important;
+  }
+  .aboutme-info {
+    margin-top: 20px;
+  }
+  .aboutme-info1 a {
+    position: relative;
+    top: -200px;
+    left: 253px;
+  }
+  .experience-info p {
+    
+    max-width: 397px !important;
+}
+.content-exp {
+  
+  justify-content: center !important;
+}
+
+.skills h2 {
+  margin-left: 59px;
+}
+
+.skills .skills-boxes {
+  padding: 1.2rem !important;
+  justify-content: space-around !important;
+}
+
+.portfolio .img-portfolio {
+  padding-bottom: 40px !important;
+}
+
+.Contact .container-info {
+  padding: 5rem !important;
+  margin: 0 !important;
+}
+
+.suggestion {
+  margin-left: 90px;
+}
+
+form ,.button{
+  display: flex;
+  flex-direction: column;
+}
+
+.suggestion .button .btn1, .suggestion .button .btn2,textarea {
+  width: 400px !important;
+}
+
+.suggestion .button .btn2 {
+  margin-top: 15px !important;
+  margin-left: 0px !important;
+
+
+}
+
+}
+
+
+
 
 @media (max-width:640px) {
   
-  nav .right-nav ul {
-    background-color: aquamarine;
-    position: fixed;
-    text-align: center;
-  
-}
-ul li {
-  padding:  0 !important;
-
-}
-
-
 
 
 nav {
