@@ -43,23 +43,24 @@ nav {
   font-weight: bolder;
   position: fixed;
   background-color: transparent;
-  position: fixed;
   margin-top: 1.2rem;
   z-index: 100;
   transition: all 0.5s ease-in-out;
 }
+
 nav .logo {
   font-size: 30px;
 }
+nav ul {
+  display: flex;
 
+}
 nav ul li {
-  display: inline-block;
   padding: 0px 30px;
 }
 nav a {
   color: #fff;
   text-decoration: none;
-  justify-content: space-between;
   text-transform: uppercase;
 }
 nav ul li a:hover {
@@ -78,6 +79,190 @@ nav ul li a:hover {
 .logo a:hover {
   color: orangered;
   transition: 0.4s all;
+}
+#click{
+  display: none;
+}
+@media (max-width:768px) {
+  
+nav {
+    padding-left: 2%;
+    padding-right: 2%;
+}
+  
+h2 {
+    font-size: 35px !important;
+}
+
+nav {
+      width: 767px !important;
+}
+nav .menu i {
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  display: none;
+}
+
+.home .home-content {
+  margin-left: 0 !important;
+}
+
+.home .home-content-text {
+    left: -20px !important;
+    top: 40px;
+}
+  
+.home .home-content-text h1 {
+  font-size: 35px !important;
+}
+
+.home .home-content-text p {
+  width: 355px !important;
+  font-size: 14px;
+}
+
+
+.home-content-btn {
+  margin-top: 0!important;
+}
+
+.information-aboutme {
+    flex-direction: column;
+    align-items: center;
+}
+.aboutme-info1 {
+    margin-left:-20px;
+}
+
+.Aboutme .aboutme-info2 {
+  margin-left: -43px;
+  margin-top: -76px;
+}
+
+.Aboutme .aboutme-info1 .btn a { 
+  position: relative;
+  top: 68px;
+}
+
+.aboutme-img img {
+    max-width: 350px;
+    margin-left: -6px;
+}
+
+hr {
+  margin-top: 90px;
+}
+
+.content-exp .container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme-info 
+,.content-exp {
+  flex-direction: column;
+}
+
+.content-exp h2 {
+  margin-left: 25px;
+} 
+
+.container-info {
+  padding: 0rem !important;
+}
+.skills {
+  margin: 0 30px;
+}
+
+.skills .skills-boxes {   
+  flex-wrap: wrap;
+}
+
+.image-card {
+  max-width: 350px;
+}
+.Contact .container-info {
+  flex-direction: column;
+}
+.Contact .contact-info {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 30px;
+}
+.contact-soical {
+  margin-top: 0 !important;
+}
+.suggestion {
+  max-width: 300px;
+  margin: 0 auto;
+}
+.suggestion p {
+  text-align: center;
+}
+.suggestion .button .btn2{
+  margin-top: 30px;
+  margin-left: 0px !important;
+}
+
+.Contact .sendmessage button {
+  width: 100%;
+}
+
+}
+
+
+@media (max-width:640px) {
+  
+  nav .right-nav ul {
+    background-color: aquamarine;
+    position: fixed;
+    text-align: center;
+  
+}
+ul li {
+  padding:  0 !important;
+
+}
+
+
+
+
+nav {
+    max-width: 375px !important;
+    margin-top: 40px !important;
+    padding: 0 20px !important;
+}
+
+ul {
+  top: 80px !important;
+}
+
+.home {
+    height: 80vh !important;
+    background-position: left  !important;
+}
+
+.home .home-content-text h3 {
+    font-size: 15px !important;
+}
+
+.home .home-content-text h1 {
+    font-size: 20px !important;
+}
+
+.home .home-content-text {
+    left: -2px !important;
+    top: 100px;
+}
+.home .home-content {
+  margin-left: 0 !important;
+}
+.home-content-btn a {
+    padding: .3rem .6rem !important;
+}
+
 }
 
 .home {
@@ -104,17 +289,19 @@ nav.nav-bg a {
 .home .home-content {
   height: 100%;
   width: 100%;
-  display: table;
-  margin-left: 50vw;
-  max-width: 550px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  color: #fff;
+  margin-left: -150px;
+
 }
 .home .home-content-text {
   z-index: 13;
   position: relative;
-  text-align: left;
-  display: table-cell;
-  vertical-align: middle;
-  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .home .home-content-text h3 {
   font-size: 20px;
@@ -128,6 +315,7 @@ nav.nav-bg a {
 .home .home-content-text p {
   line-height: 30px;
   padding-bottom: 10px;
+  max-width: 550px;
 }
 
 .home-content-btn {
@@ -183,9 +371,11 @@ nav.nav-bg a {
 .container-info {
   padding: 0 14rem;
   margin: auto;
+ 
 }
 .information-aboutme {
   display: flex;
+  justify-content: center;
 }
 
 .aboutme-img img {
@@ -260,7 +450,7 @@ nav.nav-bg a {
 }
 .experience-info p {
   font-size: 12px;
-  width: 450px;
+  max-width: 450px;
   line-height: 25px;
 }
 
@@ -510,16 +700,7 @@ nav.nav-bg a {
   padding-right: 10px;
   display: inline-block;
 }
-.suggestion .button .btn1 {
-  padding: 10px 20px;
-  border-radius: 40px;
-  background-color: #333;
-  outline: none;
-  border: none;
-  width: 300px;
-  color: #fff;
-}
-
+.suggestion .button .btn1,
 .suggestion .button .btn2 {
   padding: 10px 20px;
   border-radius: 40px;
@@ -527,8 +708,13 @@ nav.nav-bg a {
   outline: none;
   border: none;
   width: 300px;
-  margin-left: 20px;
   color: #fff;
+  width: 300px;
+
+}
+
+.suggestion .button .btn2 {
+  margin-left: 20px;
 }
 textarea {
   border-radius: 30px;
@@ -558,5 +744,5 @@ textarea {
   color: orangered;
 }
 .Contact .sendmessage button i {
-  padding: 0px 10px 0px 0px;
+  padding-right: 10px;
 }
