@@ -1,0 +1,562 @@
+@font-face {
+  font-family: 'ConcertOne-Regular';
+  src: url(../fonts/ConcertOne-Regular.ttf);
+}
+@font-face {
+  font-family: 'Festive-regular';
+  src: url(../fonts/Festive-Regular.ttf);
+}
+@font-face {
+  font-family: 'open Sans';
+  src: url(../fonts/OpenSans-VariableFont_wdth\wght.ttf);
+}
+@font-face {
+  font-family: 'poppins';
+  src: url(../fonts/Poppins-Regular.ttf);
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'poppins';
+}
+
+html {
+  scroll-behavior: smooth;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav {
+  width: 100%;
+  padding-top: 20px;
+  padding-left: 8%;
+  padding-right: 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bolder;
+  position: fixed;
+  background-color: transparent;
+  position: fixed;
+  margin-top: 1.2rem;
+  z-index: 100;
+  transition: all 0.5s ease-in-out;
+}
+nav .logo {
+  font-size: 30px;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 0px 30px;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+nav ul li a:hover {
+  color: orangered;
+  transition: 0.4s all;
+}
+
+.logo a span {
+  color: orangered;
+}
+
+.logo a {
+  font-size: 1.4rem;
+}
+
+.logo a:hover {
+  color: orangered;
+  transition: 0.4s all;
+}
+
+.home {
+  background-image: url(../images/fullscreendark.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 110vh;
+  width: 100%;
+  margin-top: -20px;
+}
+
+nav.nav-bg {
+  background-color: white;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  padding-bottom: 0.6rem;
+  box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
+nav.nav-bg a {
+  color: black;
+}
+.home .home-content {
+  height: 100%;
+  width: 100%;
+  display: table;
+  margin-left: 50vw;
+  max-width: 550px;
+}
+.home .home-content-text {
+  z-index: 13;
+  position: relative;
+  text-align: left;
+  display: table-cell;
+  vertical-align: middle;
+  color: #fff;
+}
+.home .home-content-text h3 {
+  font-size: 20px;
+}
+.home .home-content-text h1 {
+  font-size: 46px;
+}
+.home .home-content-text h1 span {
+  color: orangered;
+}
+.home .home-content-text p {
+  line-height: 30px;
+  padding-bottom: 10px;
+}
+
+.home-content-btn {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+  margin-top: 2.4rem;
+}
+
+.home-content-btn a {
+  text-decoration: none;
+  color: white;
+  background-color: orangered;
+  padding: 1rem 2rem;
+  border-radius: 30px;
+  transition: 0.4s all;
+}
+
+.home-content-btn a:hover {
+  background-color: #fff;
+  color: orangered;
+  padding: 1rem 2.8rem;
+}
+.Aboutme {
+  background-color: rgb(37, 37, 37);
+  padding-top: 7.2rem;
+}
+.Aboutme .Aboutme-content {
+  text-align: center;
+  align-items: center;
+}
+.Aboutme .Aboutme-content-head {
+  text-transform: uppercase;
+  padding: 20px 0px 40px;
+}
+.Aboutme .Aboutme-content-head h2 {
+  color: orangered;
+  padding-bottom: 10px;
+  font-size: 56px;
+  font-weight: bolder;
+  font-family: 'poppins';
+  letter-spacing: 1px;
+}
+.Aboutme .Aboutme-content-head h2 span {
+  color: white;
+  font-family: 'poppins';
+}
+.Aboutme .Aboutme-content-head p {
+  font-size: 18px;
+  opacity: 0.6;
+  color: #fff;
+}
+.container-info {
+  padding: 0 14rem;
+  margin: auto;
+}
+.information-aboutme {
+  display: flex;
+}
+
+.aboutme-img img {
+  width: 450px;
+}
+.aboutme-info {
+  font-size: 22px;
+  color: #fff;
+  display: flex;
+  padding: 0 20px;
+  line-height: 45px;
+}
+
+.aboutme-info h6 {
+  color: white;
+  font-weight: bold;
+}
+.aboutme-info span {
+  padding-left: 14px;
+  display: inline-block;
+  color: wheat;
+  opacity: 0.5;
+}
+.Aboutme .aboutme-info1 {
+  padding: 0px 20px 0px 5px;
+}
+.Aboutme .aboutme-info2 {
+  padding: 0px 0px 0px 30px;
+}
+
+.Aboutme .aboutme-info1 .btn a {
+  margin-top: 1.8rem;
+  background-color: orangered;
+  padding: 2px 20px;
+  border-radius: 45px;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.4s;
+}
+.Aboutme .aboutme-info1 .btn a:hover {
+  background-color: white;
+  color: orangered;
+}
+.content-exp {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.4rem;
+}
+.content-exp h2 {
+  font-size: 20px;
+  font-weight: bolder;
+  padding: 35px 0px;
+  color: white;
+  text-transform: uppercase;
+}
+.experience-info {
+  padding-bottom: 40px;
+  margin-left: 30px;
+  color: #fff;
+}
+.experience-info span {
+  padding-bottom: 10px;
+  display: inline-block;
+  opacity: 0.5;
+}
+.experience-info h3 {
+  padding-bottom: 10px;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.experience-info p {
+  font-size: 12px;
+  width: 450px;
+  line-height: 25px;
+}
+
+.skills h2 {
+  font-size: 1.4rem;
+  padding: 35px 0px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.skills .skills-boxes {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2.4rem;
+}
+
+.skill-box {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  color: white;
+  text-transform: uppercase;
+  padding-bottom: 4.2rem;
+}
+
+.skill-box h3::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: orangered;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+  transition: all 0.4s;
+}
+
+.skill-box h3:hover::before {
+  background-color: white;
+  transform: translateX(-3px);
+}
+.portfolio {
+  background-color: rgb(22, 21, 21);
+  padding-top: 7.2rem;
+}
+.portfolio .container-info {
+  width: 100%;
+  padding: 0 0;
+}
+.portfolio .head-portfolio {
+  text-align: center;
+  align-items: center;
+}
+.portfolio .head-portfolio h2 {
+  font-size: 56px;
+  font-weight: bolder;
+  color: orangered;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.portfolio .head-portfolio h2 span {
+  color: white;
+}
+.portfolio .head-portfolio p {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 12px;
+}
+.portfolio .img-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 20px 10px;
+}
+
+.image-card {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  margin-top: 3.2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.portfolio .img-portfolio img {
+  width: 380px;
+  height: 240.73px;
+  box-shadow: 0px 0px 10px 0.5px orangered;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+
+.portfolio .img-portfolio img:hover {
+  filter: brightness(0.4);
+}
+
+.hover-text {
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  font-size: 1.2rem;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.portfolio .img-portfolio .project-image:hover .hover-text {
+  animation: slideUp 0.8s forwards;
+}
+
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.visit-link {
+  text-align: center;
+  padding: 0.4rem 4.8rem;
+  background-color: orangered;
+  align-self: center;
+  color: white;
+  margin-top: 1.2rem;
+  border-radius: 15px;
+}
+
+.visit-link:hover {
+  background-color: rgb(228, 61, 0);
+}
+
+.portfolio .img-portfolio div h5 {
+  padding: 4px 4px 4px 0px;
+}
+.portfolio .img-portfolio div h5 span {
+  padding: 0px 10px;
+}
+
+.project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding-top: 1.2rem;
+  padding-bottom: 1.2rem;
+  background-color: #fff;
+  padding-left: 0.4rem;
+  color: black;
+}
+
+.details-row {
+  display: flex;
+  justify-content: space-around;
+  padding: 0 1.2rem;
+  align-items: center;
+}
+
+.details-row:first-of-type {
+  padding-bottom: 0.6rem;
+  border-bottom: rgb(194, 194, 194) 1px solid;
+}
+.Contact {
+  padding: 30px 0px;
+  background-color: rgb(37, 37, 37);
+  padding-top: 4.2rem;
+}
+.Contact .Contact-content-head {
+  text-align: center;
+  align-items: center;
+}
+.Contact .container-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+}
+.Contact .Contact-content-head h2 {
+  color: white;
+  font-size: 56px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  font-weight: bolder;
+  padding-bottom: 1.2rem;
+}
+.Contact .Contact-content-head h2 span {
+  color: orangered;
+}
+.Contact .Contact-content-head p {
+  color: #fff;
+  opacity: 0.7;
+  font-size: 14px;
+}
+.Contact .contact-info {
+  color: white;
+
+  width: 40%;
+}
+.Contact .contact-info div {
+  padding-bottom: 20px;
+}
+.Contact .contact-info span {
+  display: block;
+  padding: 0ps 0px 5px 0px;
+  opacity: 0.7;
+  font-size: 14px;
+}
+.Contact .contact-info i {
+  color: orangered;
+  padding: 0px 5px 0px 0px;
+}
+
+.contact-soical {
+  margin-top: 6.8rem;
+}
+.Contact .contact-soical span {
+  padding-bottom: 10px;
+}
+.Contact .contact-soical i {
+  color: #fff;
+  padding: 8px;
+  background-color: orangered;
+  border-radius: 50%;
+  margin-top: 0.4rem;
+  transition: all 0.4s;
+}
+.Contact .contact-soical i:hover {
+  color: orangered;
+  background-color: white;
+  cursor: pointer;
+  transform: translateY(-3px);
+}
+.Contact .contact-info p {
+  display: inline-block;
+  font-size: 16px;
+  padding-bottom: 15px;
+}
+.suggestion {
+  color: #fff;
+  font-size: 14px;
+}
+.suggestion .button {
+  padding-top: 20px;
+  padding-right: 10px;
+  display: inline-block;
+}
+.suggestion .button .btn1 {
+  padding: 10px 20px;
+  border-radius: 40px;
+  background-color: #333;
+  outline: none;
+  border: none;
+  width: 300px;
+  color: #fff;
+}
+
+.suggestion .button .btn2 {
+  padding: 10px 20px;
+  border-radius: 40px;
+  background-color: #333;
+  outline: none;
+  border: none;
+  width: 300px;
+  margin-left: 20px;
+  color: #fff;
+}
+textarea {
+  border-radius: 30px;
+  background-color: #333;
+  margin-top: 30px;
+  border: none;
+  height: 150px;
+  width: 100%;
+  outline: none;
+  color: #fff;
+}
+.Contact .sendmessage {
+  padding-top: 15px;
+}
+.Contact .sendmessage button {
+  color: #fff;
+  display: inline-block;
+  background-color: orangered;
+  padding: 10px 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s all;
+}
+.Contact .sendmessage button:hover {
+  background-color: white;
+  color: orangered;
+}
+.Contact .sendmessage button i {
+  padding: 0px 10px 0px 0px;
+}
