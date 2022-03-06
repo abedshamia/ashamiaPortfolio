@@ -253,7 +253,7 @@ hr {
 
 @media (min-width:641px) and (max-width:1400px) {
 nav {
-  min-width: 641px;
+  min-width: 641px !important;
     max-width: 1400px !important;
     padding-left: 2%;
     padding-right: 2%;
