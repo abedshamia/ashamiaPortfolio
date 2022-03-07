@@ -10,13 +10,23 @@ window.addEventListener('scroll', () => {
   }
 });
 
+let menuList =document.querySelector('#menuList');
+let menu=document.querySelector('.menu i');
+
 
 function toggleMenu() {
-  let menuList =document.querySelector('#menuList');
-  menuList.classList.toggle('toggleList')
+  menuList.classList.toggle('toggleList');
 }
+
 Array.from(menuList.children).map(e=>{
-  e.addEventListener('click',()=>e.parentElement.classList.toggle('hidden'));
+  e.addEventListener('click',()=>{
+    e.parentElement.classList.toggle('toggleList');
+     menu.setAttribute('class','fas fa-bars');
+});
+})
+
+menu.addEventListener('click',()=>{
+menu.classList.toggle('fa-xmark')
 })
 
 window.addEventListener('scroll', reveal);

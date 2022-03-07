@@ -692,9 +692,7 @@ nav ul li a{
     transform:  skew(360deg);
 }
 
-#click:checked ~ .menu i::before {
-    content: '\f00d';
-}
+
 
 .toggleList {
     left: 0;
