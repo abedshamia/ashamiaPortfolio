@@ -53,10 +53,10 @@ nav .logo {
 }
 nav ul {
   display: flex;
-
 }
 nav ul li {
   padding: 0px 30px;
+  animation: reveal 4s ease-in-out;
 }
 nav a {
   color: #fff;
@@ -80,6 +80,283 @@ nav ul li a:hover {
   color: orangered;
   transition: 0.4s all;
 }
+#click {
+  display: none;
+}
+.menu {
+  display: none;
+  color: white;
+  padding: 15px;
+}
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+  }
+
+  nav ul {
+    background-color: aquamarine;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    top: 70px;
+    z-index: 2;
+    text-align: center;
+    display: block;
+    height: 80vh;
+    border-radius: 20px;
+    width: 100%;
+    transition: right 0.5s ease;
+    z-index: 999999999999999999999999999999999999999999;
+  }
+  #click:checked ~ ul {
+    /* left: 100%; */
+  }
+  /* #click:checked ~ ul {
+  right: 0;
+} */
+
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  nav ul li a {
+    display: block;
+  }
+
+  nav {
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 767px !important;
+  }
+
+  h2 {
+    font-size: 35px !important;
+  }
+
+  .home .home-content {
+    margin-left: 0 !important;
+  }
+
+  .home .home-content-text {
+    left: -20px !important;
+    top: 40px;
+  }
+
+  .home .home-content-text h1 {
+    font-size: 35px !important;
+  }
+
+  .home .home-content-text p {
+    width: 355px !important;
+    font-size: 14px;
+  }
+
+  .home-content-btn {
+    margin-top: 0 !important;
+  }
+
+  .information-aboutme {
+    flex-direction: column;
+    align-items: center;
+  }
+  .aboutme-info1 {
+    margin-left: -20px;
+  }
+
+  .Aboutme .aboutme-info2 {
+    margin-left: -43px;
+    margin-top: -76px;
+  }
+
+  .Aboutme .aboutme-info1 .btn a {
+    position: relative;
+    top: 68px;
+  }
+
+  .aboutme-img img {
+    max-width: 350px;
+    margin-left: -6px;
+  }
+
+  hr {
+    margin-top: 90px;
+  }
+
+  .content-exp .container-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .aboutme-info,
+  .content-exp {
+    flex-direction: column;
+  }
+
+  .content-exp h2 {
+    margin-left: 25px;
+  }
+
+  .container-info {
+    padding: 0rem !important;
+  }
+  .skills {
+    margin: 0 30px;
+  }
+
+  .skills .skills-boxes {
+    flex-wrap: wrap;
+  }
+
+  .image-card {
+    max-width: 350px;
+  }
+  .Contact .container-info {
+    flex-direction: column;
+  }
+  .Contact .contact-info {
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+  }
+  .contact-soical {
+    margin-top: 0 !important;
+  }
+  .suggestion {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .suggestion p {
+    text-align: center;
+  }
+  .suggestion .button .btn2 {
+    margin-top: 30px;
+    margin-left: 0px !important;
+  }
+
+  .Contact .sendmessage button {
+    width: 100%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1400px) {
+  nav {
+    min-width: 641px !important;
+    max-width: 1400px !important;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  .home .home-content {
+    margin-left: 0 !important;
+  }
+  .Aboutme .container-info {
+    padding: 0 !important;
+  }
+  .information-aboutme {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .aboutme-img img {
+    width: 600px !important;
+  }
+  .aboutme-info {
+    margin-top: 20px;
+  }
+  .aboutme-info1 a {
+    position: relative;
+    top: -200px;
+    left: 253px;
+  }
+  .experience-info p {
+    max-width: 397px !important;
+  }
+  .content-exp {
+    justify-content: center !important;
+  }
+
+  .skills h2 {
+    margin-left: 59px;
+  }
+
+  .skills .skills-boxes {
+    padding: 1.2rem !important;
+    justify-content: space-around !important;
+  }
+
+  .portfolio .img-portfolio {
+    padding-bottom: 40px !important;
+  }
+
+  .Contact .container-info {
+    padding: 5rem !important;
+    margin: 0 !important;
+  }
+
+  .suggestion {
+    margin-left: 90px;
+  }
+
+  form,
+  .button {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .suggestion .button .btn1,
+  .suggestion .button .btn2,
+  textarea {
+    width: 400px !important;
+  }
+
+  .suggestion .button .btn2 {
+    margin-top: 15px !important;
+    margin-left: 0px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  nav {
+    width: 100%;
+    max-width: 640px !important;
+  }
+
+  ul {
+    top: 80px !important;
+  }
+
+  .home {
+    height: 80vh !important;
+    background-position: left !important;
+  }
+
+  .home .home-content-text h3 {
+    font-size: 15px !important;
+  }
+
+  .home .home-content-text h1 {
+    font-size: 20px !important;
+  }
+
+  .home .home-content-text {
+    left: -2px !important;
+    top: 100px;
+  }
+  .home .home-content {
+    margin-left: 0 !important;
+  }
+  .home-content-btn a {
+    padding: 0.3rem 0.6rem !important;
+  }
+}
+@media (max-width: 375px) {
+  nav {
+    width: 100%;
+    max-width: 375px !important;
+  }
+}
 
 .home {
   background-image: url(../images/fullscreendark.jpg);
@@ -89,6 +366,16 @@ nav ul li a:hover {
   height: 110vh;
   width: 100%;
   margin-top: -20px;
+  animation: revealImage 2.5s ease-in-out;
+}
+
+@keyframes revealImage {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 nav.nav-bg {
@@ -104,6 +391,15 @@ nav.nav-bg a
   color: black;
 }
 
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .home .home-content {
   height: 100%;
   width: 100%;
@@ -112,7 +408,6 @@ nav.nav-bg a
   align-items: center;
   color: #fff;
   margin-left: -150px;
-
 }
 .home .home-content-text {
   z-index: 13;
@@ -120,6 +415,18 @@ nav.nav-bg a
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: slideToRight 2.5s ease-in-out;
+}
+
+@keyframes slideToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .home .home-content-text h3 {
   font-size: 20px;
@@ -141,6 +448,18 @@ nav.nav-bg a
   gap: 1.2rem;
   align-items: center;
   margin-top: 2.4rem;
+  animation: slideToLeft 3.5s ease-in-out;
+}
+
+@keyframes slideToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .home-content-btn a {
@@ -189,7 +508,6 @@ nav.nav-bg a
 .container-info {
   padding: 0 14rem;
   margin: auto;
- 
 }
 .information-aboutme {
   display: flex;
@@ -312,6 +630,7 @@ nav.nav-bg a
 .portfolio {
   background-color: rgb(22, 21, 21);
   padding-top: 7.2rem;
+  padding-bottom: 4.8rem;
 }
 .portfolio .container-info {
   width: 100%;
@@ -358,10 +677,8 @@ nav.nav-bg a
 .portfolio .img-portfolio img {
   width: 380px;
   height: 240.73px;
-  box-shadow: 0px 0px 10px 0.5px orangered;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  cursor: pointer;
   transition: all 0.4s;
 }
 
@@ -376,6 +693,7 @@ nav.nav-bg a
   font-size: 1.2rem;
   transform: translate(-50%, -50%);
   opacity: 0;
+  pointer-events: none;
 }
 .portfolio .img-portfolio .project-image:hover .hover-text {
   animation: slideUp 0.8s forwards;
@@ -485,10 +803,14 @@ nav.nav-bg a
 }
 
 .contact-soical {
-  margin-top: 6.8rem;
+  margin-top: 4.8rem;
 }
 .Contact .contact-soical span {
   padding-bottom: 10px;
+}
+
+hr {
+  margin-top: 3.2rem;
 }
 .Contact .contact-soical i {
   color: #fff;
@@ -504,10 +826,12 @@ nav.nav-bg a
   cursor: pointer;
   transform: translateY(-3px);
 }
-.Contact .contact-info p {
+.Contact .contact-info a {
   display: inline-block;
   font-size: 16px;
   padding-bottom: 15px;
+  color: #979797;
+  margin-top: 0.8rem;
 }
 .suggestion {
   color: #fff;
@@ -528,7 +852,6 @@ nav.nav-bg a
   width: 300px;
   color: #fff;
   width: 300px;
-
 }
 
 .suggestion .button .btn2 {
@@ -538,12 +861,14 @@ textarea {
   border-radius: 30px;
   background-color: #333;
   margin-top: 30px;
+  padding: 0.8rem;
   border: none;
   height: 150px;
   width: 100%;
   outline: none;
   color: #fff;
 }
+
 .Contact .sendmessage {
   padding-top: 15px;
 }
@@ -564,6 +889,7 @@ textarea {
 .Contact .sendmessage button i {
   padding-right: 10px;
 }
+
 #click {
   display: none;
 }
@@ -853,4 +1179,20 @@ nav {
   width: 100%;
   max-width: 375px;
 }
+}
+
+.contact-link:hover {
+  color: orangered !important;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: all 1.5s ease-in-out;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+
 }
