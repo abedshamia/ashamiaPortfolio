@@ -15,6 +15,10 @@ function toggleMenu() {
   let menuList =document.querySelector('#menuList')
   menuList.classList.toggle('toggleList')
 }
+Array.from(menuList.children).map(e=>{
+  e.addEventListener('click',()=>e.parentElement.classList.toggle('hidden'))
+}
+  )
 
 window.addEventListener('scroll', reveal);
 
