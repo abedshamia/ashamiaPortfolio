@@ -56,6 +56,7 @@ nav ul {
 }
 nav ul li {
   padding: 0px 30px;
+  animation: reveal 4s ease-in-out;
 }
 nav a {
   color: #fff;
@@ -364,6 +365,16 @@ nav ul li a:hover {
   height: 110vh;
   width: 100%;
   margin-top: -20px;
+  animation: revealImage 2.5s ease-in-out;
+}
+
+@keyframes revealImage {
+  0% {
+    clip-path: inset(0 0 0 100%);
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 nav.nav-bg {
@@ -376,6 +387,14 @@ nav.nav-bg {
 
 nav.nav-bg a {
   color: black;
+}
+@keyframes reveal {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .home .home-content {
   height: 100%;
@@ -392,6 +411,18 @@ nav.nav-bg a {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  animation: slideToRight 2.5s ease-in-out;
+}
+
+@keyframes slideToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 .home .home-content-text h3 {
   font-size: 20px;
@@ -413,6 +444,18 @@ nav.nav-bg a {
   gap: 1.2rem;
   align-items: center;
   margin-top: 2.4rem;
+  animation: slideToLeft 3.5s ease-in-out;
+}
+
+@keyframes slideToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .home-content-btn a {
@@ -583,6 +626,7 @@ nav.nav-bg a {
 .portfolio {
   background-color: rgb(22, 21, 21);
   padding-top: 7.2rem;
+  padding-bottom: 4.8rem;
 }
 .portfolio .container-info {
   width: 100%;
@@ -629,10 +673,8 @@ nav.nav-bg a {
 .portfolio .img-portfolio img {
   width: 380px;
   height: 240.73px;
-  box-shadow: 0px 0px 10px 0.5px orangered;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  cursor: pointer;
   transition: all 0.4s;
 }
 
@@ -647,6 +689,7 @@ nav.nav-bg a {
   font-size: 1.2rem;
   transform: translate(-50%, -50%);
   opacity: 0;
+  pointer-events: none;
 }
 .portfolio .img-portfolio .project-image:hover .hover-text {
   animation: slideUp 0.8s forwards;
@@ -756,10 +799,14 @@ nav.nav-bg a {
 }
 
 .contact-soical {
-  margin-top: 6.8rem;
+  margin-top: 4.8rem;
 }
 .Contact .contact-soical span {
   padding-bottom: 10px;
+}
+
+hr {
+  margin-top: 3.2rem;
 }
 .Contact .contact-soical i {
   color: #fff;
@@ -775,10 +822,12 @@ nav.nav-bg a {
   cursor: pointer;
   transform: translateY(-3px);
 }
-.Contact .contact-info p {
+.Contact .contact-info a {
   display: inline-block;
   font-size: 16px;
   padding-bottom: 15px;
+  color: #979797;
+  margin-top: 0.8rem;
 }
 .suggestion {
   color: #fff;
@@ -808,12 +857,14 @@ textarea {
   border-radius: 30px;
   background-color: #333;
   margin-top: 30px;
+  padding: 0.8rem;
   border: none;
   height: 150px;
   width: 100%;
   outline: none;
   color: #fff;
 }
+
 .Contact .sendmessage {
   padding-top: 15px;
 }
@@ -833,4 +884,19 @@ textarea {
 }
 .Contact .sendmessage button i {
   padding-right: 10px;
+}
+
+.contact-link:hover {
+  color: orangered !important;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: all 1.5s ease-in-out;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
 }
