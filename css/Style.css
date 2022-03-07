@@ -81,6 +81,16 @@ nav ul li a:hover {
   transition: 0.4s all;
 }
 
+#click {
+  display: none;
+}
+.menu {
+  display: none;
+  color: white;
+  padding: 15px;
+}
+
+
 
 .home {
   background-image: url(../images/fullscreendark.jpg);
@@ -890,5 +900,6 @@ textarea {
     max-width: 292px;
     margin-left: 0px;
   }
-  
+
 } 
+
