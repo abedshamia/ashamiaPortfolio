@@ -10,6 +10,12 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
+function toggleMenu() {
+  let menuList =document.querySelector('#menuList')
+  menuList.classList.toggle('toggleList')
+}
+
 window.addEventListener('scroll', reveal);
 
 function reveal() {
@@ -26,3 +32,4 @@ function reveal() {
     }
   });
 }
+
