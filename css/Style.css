@@ -80,283 +80,7 @@ nav ul li a:hover {
   color: orangered;
   transition: 0.4s all;
 }
-#click {
-  display: none;
-}
-.menu {
-  display: none;
-  color: white;
-  padding: 15px;
-}
-@media (max-width: 768px) {
-  .menu {
-    display: block;
-  }
 
-  nav ul {
-    background-color: aquamarine;
-    width: 100%;
-    position: absolute;
-    left: -100%;
-    top: 70px;
-    z-index: 2;
-    text-align: center;
-    display: block;
-    height: 80vh;
-    border-radius: 20px;
-    width: 100%;
-    transition: right 0.5s ease;
-    z-index: 999999999999999999999999999999999999999999;
-  }
-  #click:checked ~ ul {
-    /* left: 100%; */
-  }
-  /* #click:checked ~ ul {
-  right: 0;
-} */
-
-  nav ul li {
-    display: block;
-    margin-top: 10px;
-    margin-bottom: 10px;
-  }
-  nav ul li a {
-    display: block;
-  }
-
-  nav {
-    padding-left: 2%;
-    padding-right: 2%;
-    width: 767px !important;
-  }
-
-  h2 {
-    font-size: 35px !important;
-  }
-
-  .home .home-content {
-    margin-left: 0 !important;
-  }
-
-  .home .home-content-text {
-    left: -20px !important;
-    top: 40px;
-  }
-
-  .home .home-content-text h1 {
-    font-size: 35px !important;
-  }
-
-  .home .home-content-text p {
-    width: 355px !important;
-    font-size: 14px;
-  }
-
-  .home-content-btn {
-    margin-top: 0 !important;
-  }
-
-  .information-aboutme {
-    flex-direction: column;
-    align-items: center;
-  }
-  .aboutme-info1 {
-    margin-left: -20px;
-  }
-
-  .Aboutme .aboutme-info2 {
-    margin-left: -43px;
-    margin-top: -76px;
-  }
-
-  .Aboutme .aboutme-info1 .btn a {
-    position: relative;
-    top: 68px;
-  }
-
-  .aboutme-img img {
-    max-width: 350px;
-    margin-left: -6px;
-  }
-
-  hr {
-    margin-top: 90px;
-  }
-
-  .content-exp .container-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .aboutme-info,
-  .content-exp {
-    flex-direction: column;
-  }
-
-  .content-exp h2 {
-    margin-left: 25px;
-  }
-
-  .container-info {
-    padding: 0rem !important;
-  }
-  .skills {
-    margin: 0 30px;
-  }
-
-  .skills .skills-boxes {
-    flex-wrap: wrap;
-  }
-
-  .image-card {
-    max-width: 350px;
-  }
-  .Contact .container-info {
-    flex-direction: column;
-  }
-  .Contact .contact-info {
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 30px;
-  }
-  .contact-soical {
-    margin-top: 0 !important;
-  }
-  .suggestion {
-    max-width: 300px;
-    margin: 0 auto;
-  }
-  .suggestion p {
-    text-align: center;
-  }
-  .suggestion .button .btn2 {
-    margin-top: 30px;
-    margin-left: 0px !important;
-  }
-
-  .Contact .sendmessage button {
-    width: 100%;
-  }
-}
-
-@media (min-width: 641px) and (max-width: 1400px) {
-  nav {
-    min-width: 641px !important;
-    max-width: 1400px !important;
-    padding-left: 2%;
-    padding-right: 2%;
-  }
-  .home .home-content {
-    margin-left: 0 !important;
-  }
-  .Aboutme .container-info {
-    padding: 0 !important;
-  }
-  .information-aboutme {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .aboutme-img img {
-    width: 600px !important;
-  }
-  .aboutme-info {
-    margin-top: 20px;
-  }
-  .aboutme-info1 a {
-    position: relative;
-    top: -200px;
-    left: 253px;
-  }
-  .experience-info p {
-    max-width: 397px !important;
-  }
-  .content-exp {
-    justify-content: center !important;
-  }
-
-  .skills h2 {
-    margin-left: 59px;
-  }
-
-  .skills .skills-boxes {
-    padding: 1.2rem !important;
-    justify-content: space-around !important;
-  }
-
-  .portfolio .img-portfolio {
-    padding-bottom: 40px !important;
-  }
-
-  .Contact .container-info {
-    padding: 5rem !important;
-    margin: 0 !important;
-  }
-
-  .suggestion {
-    margin-left: 90px;
-  }
-
-  form,
-  .button {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .suggestion .button .btn1,
-  .suggestion .button .btn2,
-  textarea {
-    width: 400px !important;
-  }
-
-  .suggestion .button .btn2 {
-    margin-top: 15px !important;
-    margin-left: 0px !important;
-  }
-}
-
-@media (max-width: 640px) {
-  nav {
-    width: 100%;
-    max-width: 640px !important;
-  }
-
-  ul {
-    top: 80px !important;
-  }
-
-  .home {
-    height: 80vh !important;
-    background-position: left !important;
-  }
-
-  .home .home-content-text h3 {
-    font-size: 15px !important;
-  }
-
-  .home .home-content-text h1 {
-    font-size: 20px !important;
-  }
-
-  .home .home-content-text {
-    left: -2px !important;
-    top: 100px;
-  }
-  .home .home-content {
-    margin-left: 0 !important;
-  }
-  .home-content-btn a {
-    padding: 0.3rem 0.6rem !important;
-  }
-}
-@media (max-width: 375px) {
-  nav {
-    width: 100%;
-    max-width: 375px !important;
-  }
-}
 
 .home {
   background-image: url(../images/fullscreendark.jpg);
@@ -890,6 +614,23 @@ textarea {
   padding-right: 10px;
 }
 
+
+.contact-link:hover {
+  color: orangered !important;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(-150px);
+  transition: all 1.5s ease-in-out;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+
+}
+
 #click {
   display: none;
 }
@@ -897,33 +638,37 @@ textarea {
   display: none;
   color: white;
 }
+
+
 @media (max-width: 768px) {
 nav.nav-bg ul li a {
     color: orangered;
 }
 .menu {
     display: block;
+    position: absolute;
+    right:20px ;
 }
 
 nav ul {
-    display: block;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     position: absolute;
     top: 80px;
     background-color: #fff;
     width: 100%;
     left: -100%;
-    height: 110vh;
+    height: 92vh;
     text-align: center;
     border-radius: 10px 10px 0 0;
     transition: all 1s ease;
+    
 }
 
-nav ul li {
-    margin: 60px 0;
-}
 
 nav ul li a{
-    margin-bottom: 30px;
     color: orangered;
     font-size: 20px;
 }
@@ -948,10 +693,12 @@ nav ul li a{
 nav {
     padding-left: 2%;
     padding-right: 2%;
-    width: 767px  ;
+   
 }
 
-h2 {
+.Contact .Contact-content-head h2
+,.portfolio .head-portfolio h2
+,.Aboutme .Aboutme-content-head h2  { 
   font-size: 35px  ;
 }
 
@@ -1138,61 +885,10 @@ textarea {
 }
 }
 
-@media (max-width: 640px) {
-nav {
-  width: 100%;
-  max-width: 640px;
-}
-
-ul {
-  top: 80px;
-}
-
-.home {
-  height: 80vh  ;
-  background-position: left;
-}
-
-.home .home-content-text h3 {
-  font-size: 15px;
-}
-
-.home .home-content-text h1 {
-  font-size: 20px;
-}
-
-.home .home-content-text {
-  left: -2px;
-  top: 100px;
-}
-.home .home-content {
-  margin-left: 0;
-}
-.home-content-btn a {
-  padding: 0.3rem 0.6rem;
-}
-
-}
-
-@media (max-width: 375px) {
-nav {
-  width: 100%;
-  max-width: 375px;
-}
-}
-
-.contact-link:hover {
-  color: orangered !important;
-}
-
-.reveal {
-  opacity: 0;
-  transform: translateY(-150px);
-  transition: all 1.5s ease-in-out;
-}
-
-.reveal.active {
-  transform: translateY(0);
-  opacity: 1;
-
-}
+@media (max-width:345px) {
+  .aboutme-img img {
+    max-width: 292px;
+    margin-left: 0px;
+  }
+  
+} 
