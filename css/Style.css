@@ -896,27 +896,26 @@ textarea {
 }
 
  @media (max-width:500px) {
-    nav {
-      margin-top: -1rem;
-    }
-    .logo a {
-      font-size: 1rem;
-  }
-  .menu {
-    font-size: 15px;
-  }
-   .home {
-     height: 42vh;
-     margin-top: 0;
-   }
-   .home .home-content {
-    /* max-width: 200px; */
-     position: absolute;
-     right: 0;
-     top: -187px;
-   }
-   .home .home-content-text h3 {
-    font-size: 12px;
+nav {
+  margin-top: -1rem;
+}
+.logo a {
+  font-size: 1rem;
+}
+.menu {
+font-size: 15px;
+}
+.home {
+  height: 42vh;
+  margin-top: 0;
+}
+.home .home-content {
+  position: absolute;
+  right: 0;
+  top: -187px;
+}
+.home .home-content-text h3 {
+font-size: 12px;
 }
 .home .home-content-text h1 {
   font-size: 15px;
@@ -935,30 +934,30 @@ textarea {
   padding: .3rem .4rem;
   
 }
- }
- .hidden {
-   display: none;
- }
+.details-row {
+  padding: 0;
+}
+}
+.hidden {
+  display: none;
+}
  
 @media (max-width:320px) {
-  .aboutme-img img {
-    max-width: 257px;
-    margin-left: 0px;
-  }
-  .home .home-content-text p {
-    max-width: 184px;
-    line-height: 1;
-  }
-  .suggestion {
-    max-width: 270px;
-  }
-  .suggestion .button .btn1, 
-  .suggestion .button .btn2 {
-    max-width: 260px;
+.aboutme-img img {
+  max-width: 257px;
+  margin-left: 0px;
+}
+.home .home-content-text p {
+  max-width: 184px;
+  line-height: 1;
+}
+.suggestion {
+  max-width: 270px;
+}
+.suggestion .button .btn1, 
+.suggestion .button .btn2 {
+  max-width: 260px;
 
-  }
-  .suggestion p {
-   /* max-width: 280px; */
 }
 .email {
   margin-left: -40px;
