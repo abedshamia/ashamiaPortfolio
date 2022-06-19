@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
-
+import About from './components/About';
+import Contact from './components/Contact';
+import Header from './components/Header';
+import Hero from './components/Hero';
+import LoadingSpinner from './components/LoadingSpinner';
+import Projects from './components/Projects';
+import {useState, useEffect} from 'react'
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }
+    , 3000);
+  }, [loading])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {
+        loading ? <LoadingSpinner /> :
+        <>
+          <Header />
+          <Hero />
+          <About />
+          <Projects />
+          <Contact />
+        </>
+      }
+
+    </>
   );
 }
 
