@@ -5,13 +5,13 @@ const Contact = () => {
         const form = document.querySelector('#form');
 
         form.addEventListener('submit', e => {
-            const name = document.querySelector('input[name="name"]').value.trim();
-            const email = document.querySelector('input[name="email"]').value.trim();
-            const message = document.querySelector('textarea[name="message"]').value.trim();
+            const name = form.querySelector('input[name="name"]').value.trim();
+            const email = form.querySelector('input[name="email"]').value.trim();
+            const message = form.querySelector('textarea[name="message"]').value.trim();
             let errorMessages = [];
           
             // eslint-disable-next-line no-unused-expressions
-            document.querySelector('.error') ? document.querySelector('.error').remove() : null;
+            form.querySelector('.error') ? form.querySelector('.error').remove() : null;
           
             if (!name && !email && !message) {
               errorMessages.push('Please fill in all fields');
@@ -95,7 +95,12 @@ const Contact = () => {
        
         <div className="suggestion">
             <p>If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.</p>
-            <form method='post' data-netlify='true' name='contact' id='form'>
+            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="name" />
+             <input type="email" name="email" />
+             <textarea name="message"></textarea>
+            </form>
+            <form method='post' name='contact' id='form'>
             <input type="hidden" name="form-name" value="contact" />
            <div className="button" >
              
