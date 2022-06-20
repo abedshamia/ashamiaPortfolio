@@ -1,6 +1,20 @@
 import React, { useEffect } from 'react'
-
+import {NotificationContainer, NotificationManager} from 'react-notifications'
+import 'react-notifications/lib/notifications.css';
 const Contact = () => {
+
+    const createNotifications = (type) => {
+        return () => {
+            switch (type) {
+            case 'success':
+                NotificationManager.success('Success message', 'Your message has been sent successfully', 3000);
+                break;
+                default:
+                    NotificationManager.error('Error message', 'Something went wrong', 3000);
+                    break;
+            }
+        }
+    }
     useEffect(() => {
         const form = document.querySelector('#form');
 
@@ -41,7 +55,10 @@ const Contact = () => {
                 errorList.appendChild(errorItem);
               });
             } else {
-              form.submit();
+                e.preventDefault();
+                const success = createNotifications('success');
+                success();
+
             }
           });
     }, [])
@@ -100,6 +117,7 @@ const Contact = () => {
           </div>
          </form>
         </div>
+         <NotificationContainer/>
         </div>
     </div>
 </section>
