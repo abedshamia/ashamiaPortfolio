@@ -1,6 +1,50 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const Contact = () => {
+    useEffect(() => {
+        const form = document.querySelector('#form');
+
+        form.addEventListener('submit', e => {
+            const name = document.querySelector('input[name="name"]').value.trim();
+            const email = document.querySelector('input[name="email"]').value.trim();
+            const message = document.querySelector('textarea[name="message"]').value.trim();
+            let errorMessages = [];
+          
+            // eslint-disable-next-line no-unused-expressions
+            document.querySelector('.error') ? document.querySelector('.error').remove() : null;
+          
+            if (!name && !email && !message) {
+              errorMessages.push('Please fill in all fields');
+            }
+          
+            if (!name) {
+              errorMessages.push('Please enter your name');
+            }
+          
+            if (!email) {
+              errorMessages.push('Please enter your email');
+            }
+          
+            if (!message) {
+              errorMessages.push('Please enter a message');
+            }
+          
+            if (errorMessages.length > 0) {
+              e.preventDefault();
+              const errorList = document.createElement('ul');
+              errorList.classList.add('error');
+              form.appendChild(errorList);
+              errorMessages.forEach(error => {
+                const errorItem = document.createElement('li');
+                errorItem.classList.add('error-item');
+                errorItem.textContent = error;
+                errorList.appendChild(errorItem);
+              });
+            } else {
+              form.submit();
+            }
+          });
+    })
   return (
     <section className="">
     <div className="Contact reveal" id="Contact">
