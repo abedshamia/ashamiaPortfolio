@@ -84,7 +84,8 @@ const Contact = () => {
        
         <div className="suggestion">
             <p>If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.</p>
-            <form method="post" data-netlify="true" id="form" >
+            <form method='post' data-netlify='true' name='contact' id='form'>
+            <input type="hidden" name="form-name" value="contact" />
            <div className="button" >
              
                <input  type="text" placeholder="YOUR NAME" className="btn1" name="name" />
@@ -92,7 +93,7 @@ const Contact = () => {
            </div>
            <textarea placeholder="    Your message..."  id="comment" className="Areacomment" name="message" ></textarea>
            <div className="sendmessage">
-           <button>
+           <button type='submit'>
             <i className="fa-regular fa-paper-plane"></i>
             <span>SEND MESSAGE</span>
            </button>
