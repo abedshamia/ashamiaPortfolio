@@ -41,7 +41,19 @@ const Contact = () => {
                 errorList.appendChild(errorItem);
               });
             } else {
-              form.submit();
+                e.preventDefault();
+                const formData = new FormData();
+                formData.append('name', name);
+                formData.append('email', email);
+                formData.append('message', message);
+                fetch('/', {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                    
+                }).then(() => console.log('Form submitted'));
             }
           });
     }, [])
