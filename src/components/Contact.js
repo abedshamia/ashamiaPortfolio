@@ -58,7 +58,9 @@ const Contact = () => {
                 e.preventDefault();
                 const success = createNotifications('success');
                 success();
-
+                setTimeout(() => {
+                    form.submit()
+                }, 1500);
             }
           });
     }, [])
