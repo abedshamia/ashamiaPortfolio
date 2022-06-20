@@ -5,13 +5,13 @@ const Contact = () => {
         const form = document.querySelector('#form');
 
         form.addEventListener('submit', e => {
-            const name = form.querySelector('input[name="name"]').value.trim();
-            const email = form.querySelector('input[name="email"]').value.trim();
-            const message = form.querySelector('textarea[name="message"]').value.trim();
+            const name = document.querySelector('input[name="name"]').value.trim();
+            const email = document.querySelector('input[name="email"]').value.trim();
+            const message = document.querySelector('textarea[name="message"]').value.trim();
             let errorMessages = [];
           
             // eslint-disable-next-line no-unused-expressions
-            form.querySelector('.error') ? form.querySelector('.error').remove() : null;
+            document.querySelector('.error') ? document.querySelector('.error').remove() : null;
           
             if (!name && !email && !message) {
               errorMessages.push('Please fill in all fields');
@@ -41,18 +41,7 @@ const Contact = () => {
                 errorList.appendChild(errorItem);
               });
             } else {
-                const formData = new FormData();
-                formData.append('name', name);
-                formData.append('email', email);
-                formData.append('message', message);
-                fetch('/', {
-                    method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
-                    }
-                    
-                }).then(() => console.log('Form submitted'));
+              form.submit();
             }
           });
     }, [])
@@ -95,13 +84,8 @@ const Contact = () => {
        
         <div className="suggestion">
             <p>If you have any suggestion, project or even you want to say Hello.. please fill out the form below and I will reply you shortly.</p>
-            <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-            <input type="text" name="name" />
-             <input type="email" name="email" />
-             <textarea name="message"></textarea>
-            </form>
-            <form method='post' name='contact' id='form'>
-            <input type="hidden" name="form-name" value="contact" />
+            <form method='post' data-netlify="true" id="form" name='contact-form' >
+                <input type='hidden' name='form-name' value='contact-form' />
            <div className="button" >
              
                <input  type="text" placeholder="YOUR NAME" className="btn1" name="name" />
@@ -109,7 +93,7 @@ const Contact = () => {
            </div>
            <textarea placeholder="    Your message..."  id="comment" className="Areacomment" name="message" ></textarea>
            <div className="sendmessage">
-           <button type='submit'>
+           <button>
             <i className="fa-regular fa-paper-plane"></i>
             <span>SEND MESSAGE</span>
            </button>
