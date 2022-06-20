@@ -41,7 +41,6 @@ const Contact = () => {
                 errorList.appendChild(errorItem);
               });
             } else {
-                e.preventDefault();
                 const formData = new FormData();
                 formData.append('name', name);
                 formData.append('email', email);
