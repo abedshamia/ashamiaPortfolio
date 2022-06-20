@@ -44,7 +44,7 @@ const Contact = () => {
               form.submit();
             }
           });
-    })
+    }, [])
   return (
     <section className="">
     <div className="Contact reveal" id="Contact">
