@@ -70,15 +70,13 @@ const projects = [
     {
         id: 6,
         img: '/assets/images/project-6.png',
-        textHover: 'Find your job in UK',
-        name: 'Job Finder',
+        textHover: 'Gym and workout website',
+        name: 'Gym Website',
         technologies: [
-            'HTML',
-            'CSS',
-            'JavaScript',
-            'Node.js',
+            'React',
+            '@emotion',
         ],
-        link: 'https://job-search-appnode.herokuapp.com/'
+        link: 'https://gymbulldozer.netlify.app/'
     }
 ]
 const Projects = () => {
